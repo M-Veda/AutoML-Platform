@@ -1,0 +1,736 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: radial-gradient(circle at top left, #06142e, #020617);
+
+  min-height: 100vh;
+
+  color: white;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   MAIN APP CONTAINER
+========================= */
+
+.app-container {
+
+  width: 100vw;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 40px 20px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.main-title {
+
+  font-size: 72px;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+
+  background: linear-gradient(to right, #ffffff, #00d4ff);
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+
+  color: #b5c7e3;
+
+  font-size: 20px;
+
+  max-width: 800px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   UPLOAD CARD
+========================= */
+
+.upload-card {
+
+  width: 100%;
+
+  max-width: 650px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+
+  margin-bottom: 50px;
+}
+
+.card-title {
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.input-field {
+
+  width: 100%;
+
+  padding: 16px 18px;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  background: rgba(0,0,0,0.2);
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.input-field:focus {
+
+  border-color: #00d4ff;
+
+  box-shadow: 0 0 12px rgba(0,212,255,0.35);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.upload-btn,
+.train-btn,
+.predict-btn {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  margin-top: 10px;
+}
+
+.upload-btn {
+
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+
+  color: white;
+}
+
+.upload-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(0,198,255,0.3);
+}
+
+.train-btn {
+
+  background: linear-gradient(to right, #a855f7, #ec4899);
+
+  color: white;
+}
+
+.train-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(236,72,153,0.35);
+}
+
+.predict-btn {
+
+  background: linear-gradient(to right, #00c853, #00e676);
+
+  color: black;
+}
+
+.predict-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(0,230,118,0.35);
+}
+
+
+/* =========================
+   STATUS MESSAGE
+========================= */
+
+.status-message {
+
+  text-align: center;
+
+  margin-top: 18px;
+
+  color: #00ff95;
+
+  font-weight: bold;
+}
+
+
+/* =========================
+   RESULTS SECTION
+========================= */
+
+.results-section {
+
+  width: 100%;
+
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.results-header {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+}
+
+.info-box {
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 18px;
+
+  padding: 20px 30px;
+
+  min-width: 280px;
+
+  backdrop-filter: blur(15px);
+}
+
+.info-label {
+
+  color: #9fb4d8;
+
+  font-size: 15px;
+
+  margin-bottom: 10px;
+}
+
+.info-value {
+
+  font-size: 32px;
+
+  font-weight: bold;
+
+  color: #00e5ff;
+}
+
+
+/* =========================
+   TRAINING RESULTS TITLE
+========================= */
+
+.section-title {
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+
+  text-align: center;
+}
+
+.section-subtitle {
+
+  text-align: center;
+
+  color: #9fb4d8;
+
+  margin-bottom: 40px;
+}
+
+
+/* =========================
+   RESULT CARDS GRID
+========================= */
+
+.metrics-grid {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+
+/* =========================
+   INDIVIDUAL RESULT CARD
+========================= */
+
+.result-card {
+
+  width: 100%;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 22px;
+
+  padding: 28px;
+
+  backdrop-filter: blur(15px);
+
+  transition: 0.3s;
+}
+
+.result-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.algorithm-name {
+
+  font-size: 30px;
+
+  font-weight: bold;
+
+  margin-bottom: 25px;
+
+  color: #00d4ff;
+}
+
+
+/* =========================
+   METRICS
+========================= */
+
+.metric-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.metric-label {
+
+  color: #aab8d4;
+}
+
+.metric-value {
+
+  font-weight: bold;
+
+  color: white;
+}
+
+
+/* =========================
+   PREDICTION SECTION
+========================= */
+
+.prediction-section {
+
+  width: 100%;
+
+  max-width: 760px;
+
+  margin: 40px auto 80px auto;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.prediction-card {
+
+  width: 100%;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+
+/* =========================
+   PREDICTION INPUT GRID
+========================= */
+
+.prediction-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-top: 25px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   PREDICTION RESULT
+========================= */
+
+.prediction-result {
+
+  margin-top: 30px;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  background: rgba(0,255,140,0.1);
+
+  border: 1px solid rgba(0,255,140,0.25);
+}
+
+.prediction-label {
+
+  color: #9fb4d8;
+
+  margin-bottom: 12px;
+
+  font-size: 18px;
+}
+
+.prediction-value {
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+  color: #00ff95;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  .main-title {
+
+    font-size: 48px;
+  }
+
+  .subtitle {
+
+    font-size: 16px;
+  }
+
+  .prediction-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+
+    font-size: 32px;
+  }
+
+  .algorithm-name {
+
+    font-size: 24px;
+  }
+
+  .prediction-value {
+
+    font-size: 36px;
+  }
+}
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+.leaderboard-section {
+
+  margin-top: 50px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.leaderboard-container {
+
+  width: 100%;
+
+  max-width: 760px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.leaderboard-card {
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  transition: 0.3s ease;
+}
+
+.leaderboard-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color: #00d4ff;
+}
+
+.winner-card {
+
+  border: 2px solid #00ff88;
+
+  box-shadow: 0 0 25px rgba(0,255,136,0.25);
+}
+
+.leaderboard-rank {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  min-width: 60px;
+
+  text-align: center;
+}
+
+.leaderboard-model h3 {
+
+  color: white;
+
+  margin-bottom: 6px;
+}
+
+.leaderboard-model p {
+
+  color: #b8c5e3;
+}
+
+/* =========================
+   XAI SECTION
+========================= */
+
+.xai-card {
+
+  margin-top: 30px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 20px;
+
+  padding: 25px;
+}
+
+.xai-card h2 {
+
+  color: white;
+
+  font-size: 24px;
+
+  margin-bottom: 20px;
+}
+
+.xai-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.xai-row:last-child {
+
+  border-bottom: none;
+}
+
+.xai-feature {
+
+  color: #00d4ff;
+
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+.xai-value {
+
+  color: #00ff88;
+
+  font-weight: 700;
+}
+
+/* =========================
+   LOADING BUTTON
+========================= */
+
+button:disabled {
+
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none !important;
+}
+
+.progress-container {
+
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+.progress-bar {
+
+  height: 12px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #00f5ff,
+    #00ff88
+  );
+
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+
+  margin-top: 10px;
+
+  text-align: center;
+
+  color: white;
+
+  font-weight: 600;
+}

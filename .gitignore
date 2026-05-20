@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+outputs/
+*.pkl
+*.pyc
+node_modules/
+dist/
