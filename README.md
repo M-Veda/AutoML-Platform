@@ -4,8 +4,6 @@ An end-to-end AI-powered AutoML platform that allows users to upload datasets, a
 
 ---
 
-## 🌐 Live Demo
-
 ### Frontend Deployment
 
 [AutoML Platform Live Demo](https://auto-ml-platform.vercel.app?utm_source=chatgpt.com)
